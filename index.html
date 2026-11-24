@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#06132A">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="A. Tubolcev">
+<meta property="og:title" content="Andrej Tubolcev – Vessel / Technical Manager">
+<meta name="description" content="Andrej Tubolcev, offshore marine manager. Digital business card.">
+<title>Andrej Tubolcev – Digital Business Card</title>
+<style>
+  :root{--navy:#0A1E3C;--navy2:#06132A;--ink:#E7EDF7;--muted:#9FB0CC;--brass:#C9A55C;--line:rgba(201,165,92,.28);--card:rgba(255,255,255,.045)}
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{background:#06132A;min-height:100%}
+  body{font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text","Segoe UI",Inter,Roboto,Helvetica,Arial,sans-serif;
+    color:var(--ink);background:radial-gradient(120% 70% at 50% -10%,#163A6E 0%,var(--navy) 45%,var(--navy2) 100%) no-repeat;background-color:var(--navy2);min-height:100vh;
+    -webkit-font-smoothing:antialiased;padding:env(safe-area-inset-top) 0 env(safe-area-inset-bottom)}
+  .wrap{max-width:430px;margin:0 auto;padding:36px 22px 40px}
+  .head{text-align:center}
+  .mono{width:104px;height:104px;margin:0 auto 18px;border-radius:50%;display:grid;place-items:center;
+    background:linear-gradient(145deg,#12305C,#081A36);border:1.5px solid var(--brass);
+    box-shadow:0 0 0 6px rgba(201,165,92,.08),0 14px 30px rgba(0,0,0,.45);
+    overflow:hidden}
+  .mono img{width:100%;height:100%;object-fit:cover}
+  h1{font-size:28px;font-weight:650;letter-spacing:.2px}
+  .role{margin-top:8px;color:var(--brass);font-size:14.5px;font-weight:550;letter-spacing:.3px;line-height:1.5}
+  .sub{margin-top:10px;color:var(--muted);font-size:13.5px;line-height:1.5}
+  .chips{display:flex;flex-wrap:wrap;gap:7px;justify-content:center;margin:18px 0 6px}
+  .chip{font-size:12px;padding:6px 11px;border-radius:999px;border:1px solid var(--line);color:#D7DFEC;background:rgba(255,255,255,.03)}
+  .chip.ok{border-color:rgba(110,200,150,.45);color:#B9EBCD}
+  .grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:24px 0 18px}
+  .q{display:flex;flex-direction:column;align-items:center;gap:7px;text-decoration:none;color:var(--ink);font-size:12px}
+  .q i{width:58px;height:58px;border-radius:18px;display:grid;place-items:center;background:var(--card);border:1px solid var(--line)}
+  .q svg{width:26px;height:26px;fill:none;stroke:var(--brass);stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+  .q:active i{transform:scale(.96)}
+  .list{border-radius:20px;background:var(--card);border:1px solid rgba(255,255,255,.07);overflow:hidden}
+  .row{display:flex;align-items:center;gap:14px;padding:15px 16px;text-decoration:none;color:var(--ink);border-top:1px solid rgba(255,255,255,.06)}
+  .row:first-child{border-top:0}
+  .row svg{flex:0 0 22px;width:22px;height:22px;fill:none;stroke:var(--brass);stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+  .row b{display:block;font-weight:550;font-size:15px}
+  .row small{display:block;color:var(--muted);font-size:12px;margin-top:2px}
+  .row .arr{margin-left:auto;color:var(--muted);font-size:18px}
+  .save{display:flex;align-items:center;justify-content:center;gap:10px;width:100%;margin-top:18px;padding:16px;border:0;border-radius:16px;
+    background:linear-gradient(180deg,#D8B771,#B8914A);color:#0A1E3C;font:650 16px/1 inherit;font-family:inherit;cursor:pointer;
+    box-shadow:0 10px 24px rgba(201,165,92,.25)}
+  .save svg{width:20px;height:20px;fill:none;stroke:#0A1E3C;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+  .two{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:10px}
+  .ghost{padding:14px;border-radius:14px;border:1px solid var(--line);background:transparent;color:var(--ink);font:550 14px/1 inherit;font-family:inherit;cursor:pointer}
+  .qr{display:none;margin-top:18px;text-align:center;padding:20px;border-radius:20px;background:#fff}
+  .qr.on{display:block}
+  .qr svg{width:100%;max-width:280px;height:auto}
+  .qr p{color:#0A1E3C;font-size:13px;margin-top:8px}
+  .about{margin-top:22px;padding:18px;border-radius:20px;border:1px solid rgba(255,255,255,.07);background:rgba(255,255,255,.025)}
+  .about h2{font-size:12px;letter-spacing:1.6px;text-transform:uppercase;color:var(--brass);font-weight:600;margin-bottom:10px}
+  .about li{list-style:none;color:#D3DCEA;font-size:13.5px;line-height:1.55;padding-left:16px;position:relative;margin-top:6px}
+  .about li:before{content:"";position:absolute;left:0;top:.62em;width:6px;height:6px;border-radius:50%;background:var(--brass)}
+  .foot{margin-top:24px;text-align:center;color:#6F82A3;font-size:11.5px;line-height:1.6}
+  .note{color:#E9C98A}
+  .hide{display:none!important}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="head">
+    <div class="mono"><img src="data:image/jpeg;base64,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" alt="Andrej Tubolcev"></div>
+    <h1>Andrej Tubolcev</h1>
+    <div class="role">Vessel Manager · Technical Manager<br>Marine Advisor · Port Engineer</div>
+    <div class="sub">25+ years in offshore marine operations<br>DP2/DP3 vessels · Jack-ups · Offshore wind · Saudi Aramco projects</div>
+    <div class="chips">
+      <span class="chip ok" id="avail">Available from 12 Dec 2026</span>
+      <span class="chip">EU citizen</span>
+      <span class="chip">Gulf · Asia · Africa · Remote</span>
+    </div>
+  </div>
+
+  <div class="grid">
+    <a class="q" id="qcall" href="tel:+35797915262"><i><svg viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg></i>Call</a>
+    <a class="q" href="https://wa.me/971585597368"><i><svg viewBox="0 0 24 24"><path d="M3 21l1.7-5A8.5 8.5 0 1 1 8 19.4z"/><path d="M9 9.5c.3 2.2 2.3 4.3 4.5 4.6l1-1.1 2 .9c-.2 1.1-1.1 1.8-2.2 1.7C10.8 15.3 8.7 13.2 8.4 9.7c-.1-1.1.6-2 1.7-2.2l.9 2z"/></svg></i>WhatsApp</a>
+    <a class="q" href="mailto:andrejtubolcev@gmail.com?subject=Hello%20Andrej"><i><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></i>Email</a>
+    <a class="q" href="https://www.linkedin.com/in/andrej-tubolcev-b4802286" target="_blank" rel="noopener"><i><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M8 10v7M8 7v.01M12 17v-4a2 2 0 0 1 4 0v4M12 10v7"/></svg></i>LinkedIn</a>
+  </div>
+
+  <div class="list">
+    <a class="row" id="rcall" href="tel:+35797915262"><svg viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg><span><b>+357 97 915262</b><small>Mobile, Cyprus · <span class="note">until 11 Dec 2026</span></small></span><span class="arr">›</span></a>
+    <a class="row" href="https://wa.me/971585597368"><svg viewBox="0 0 24 24"><path d="M3 21l1.7-5A8.5 8.5 0 1 1 8 19.4z"/></svg><span><b>+971 58 559 7368</b><small>WhatsApp · messages and calls</small></span><span class="arr">›</span></a>
+    <a class="row" href="mailto:andrejtubolcev@gmail.com"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg><span><b>andrejtubolcev@gmail.com</b><small>Email</small></span><span class="arr">›</span></a>
+    <a class="row" href="https://www.linkedin.com/in/andrej-tubolcev-b4802286" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M8 10v7M8 7v.01M12 17v-4a2 2 0 0 1 4 0v4M12 10v7"/></svg><span><b>LinkedIn</b><small>andrej-tubolcev-b4802286</small></span><span class="arr">›</span></a>
+  </div>
+
+  <button class="save" id="save"><svg viewBox="0 0 24 24"><path d="M12 3v12M7 10l5 5 5-5M4 21h16"/></svg>Save contact</button>
+  <div class="two">
+    <button class="ghost" id="qrb">Show QR code</button>
+    <button class="ghost" id="share">Share card</button>
+  </div>
+  <div class="qr" id="qr"><svg width="438" height="438" class="segno"><g transform="scale(6)"><path fill="#fff" d="M0 0h73v73h-73z"/><path class="qrline" stroke="#0a1e3c" d="M2 2.5h7m4 0h2m1 0h2m2 0h3m1 0h3m6 0h1m1 0h1m1 0h1m1 0h1m2 0h3m1 0h1m2 0h3m2 0h9m1 0h7m-69 1h1m5 0h1m1 0h1m1 0h1m1 0h1m1 0h5m1 0h1m1 0h1m1 0h1m2 0h3m1 0h1m2 0h5m1 0h1m1 0h2m2 0h1m3 0h1m1 0h1m2 0h3m4 0h1m5 0h1m-69 1h1m1 0h3m1 0h1m3 0h1m1 0h6m1 0h3m1 0h2m2 0h3m1 0h1m1 0h1m1 0h2m3 0h2m1 0h2m2 0h2m3 0h2m1 0h4m3 0h1m1 0h3m1 0h1m-69 1h1m1 0h3m1 0h1m1 0h1m3 0h2m3 0h4m7 0h3m3 0h3m1 0h2m1 0h2m4 0h2m1 0h1m9 0h1m1 0h1m1 0h3m1 0h1m-69 1h1m1 0h3m1 0h1m2 0h2m1 0h1m1 0h3m4 0h4m1 0h1m4 0h6m3 0h4m1 0h1m5 0h5m2 0h1m1 0h1m1 0h1m1 0h3m1 0h1m-69 1h1m5 0h1m1 0h1m1 0h2m6 0h1m4 0h2m2 0h1m4 0h1m3 0h3m3 0h1m2 0h3m3 0h1m2 0h2m2 0h1m3 0h1m5 0h1m-69 1h7m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h7m-59 1h1m2 0h2m2 0h2m2 0h1m3 0h1m3 0h2m1 0h1m3 0h1m2 0h2m2 0h3m1 0h1m2 0h3m1 0h3m1 0h2m-60 1h5m1 0h7m1 0h2m1 0h2m2 0h1m2 0h2m1 0h2m1 0h1m1 0h5m2 0h1m5 0h5m4 0h1m2 0h5m1 0h1m1 0h1m1 0h1m-67 1h2m7 0h2m1 0h1m1 0h2m1 0h2m1 0h1m1 0h2m1 0h1m4 0h5m1 0h1m1 0h4m5 0h2m4 0h1m1 0h1m2 0h3m1 0h1m2 0h2m-67 1h1m2 0h1m1 0h4m4 0h2m2 0h2m1 0h1m5 0h1m1 0h4m1 0h4m1 0h2m2 0h6m1 0h2m2 0h9m1 0h1m2 0h1m-68 1h1m1 0h1m2 0h1m6 0h1m1 0h1m1 0h1m2 0h2m1 0h1m1 0h1m1 0h1m1 0h4m4 0h1m3 0h1m1 0h3m4 0h1m2 0h3m3 0h3m2 0h2m1 0h1m1 0h1m-69 1h1m4 0h3m2 0h1m3 0h1m3 0h1m1 0h1m4 0h1m1 0h2m1 0h1m1 0h6m1 0h1m1 0h2m2 0h1m1 0h3m1 0h1m1 0h1m1 0h1m1 0h2m2 0h1m1 0h1m3 0h2m-69 1h1m1 0h3m6 0h3m1 0h3m1 0h1m1 0h4m1 0h2m1 0h1m1 0h3m5 0h1m2 0h2m4 0h2m1 0h2m1 0h1m1 0h1m2 0h3m1 0h1m1 0h3m-68 1h1m2 0h2m1 0h1m2 0h1m2 0h3m3 0h2m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m2 0h1m1 0h6m3 0h1m1 0h1m1 0h1m1 0h2m2 0h1m2 0h5m1 0h1m1 0h4m-67 1h5m1 0h1m1 0h3m1 0h6m3 0h2m1 0h1m2 0h4m5 0h1m1 0h3m7 0h5m2 0h2m5 0h1m1 0h3m-65 1h4m1 0h1m1 0h1m1 0h5m1 0h2m3 0h1m1 0h1m1 0h1m2 0h4m1 0h1m1 0h3m3 0h1m1 0h1m1 0h2m5 0h2m1 0h2m2 0h1m4 0h1m1 0h1m-68 1h1m5 0h4m3 0h2m1 0h2m2 0h1m1 0h2m2 0h1m1 0h1m5 0h1m1 0h1m2 0h1m1 0h1m1 0h1m4 0h1m1 0h4m1 0h1m2 0h3m2 0h1m1 0h1m-67 1h1m3 0h4m1 0h2m3 0h6m1 0h1m1 0h4m2 0h1m2 0h3m1 0h3m1 0h2m2 0h3m3 0h2m7 0h3m1 0h1m2 0h2m-64 1h1m3 0h2m1 0h1m5 0h2m3 0h1m1 0h3m1 0h4m1 0h1m1 0h1m1 0h1m2 0h1m1 0h4m3 0h2m1 0h2m1 0h3m2 0h7m1 0h1m-66 1h11m1 0h6m6 0h2m1 0h1m2 0h1m1 0h2m1 0h2m1 0h1m3 0h1m2 0h2m3 0h1m3 0h1m8 0h1m-67 1h1m3 0h1m3 0h3m6 0h1m3 0h4m1 0h1m4 0h1m9 0h2m4 0h2m2 0h1m1 0h4m3 0h2m1 0h1m1 0h4m-68 1h3m1 0h3m4 0h1m1 0h3m5 0h1m4 0h2m1 0h1m2 0h4m1 0h3m1 0h1m3 0h1m1 0h1m2 0h1m1 0h2m3 0h4m2 0h1m1 0h1m-67 1h4m1 0h1m2 0h1m4 0h2m1 0h3m1 0h1m2 0h1m2 0h1m1 0h1m1 0h2m1 0h1m1 0h1m1 0h1m1 0h2m8 0h5m2 0h1m2 0h2m2 0h5m-68 1h1m1 0h2m2 0h1m1 0h1m3 0h1m1 0h1m2 0h2m2 0h1m1 0h3m1 0h1m1 0h2m3 0h1m1 0h1m5 0h2m3 0h2m4 0h2m2 0h1m2 0h1m2 0h1m2 0h3m-68 1h3m6 0h1m1 0h4m2 0h2m1 0h1m1 0h2m1 0h1m2 0h1m1 0h1m3 0h1m1 0h1m3 0h2m1 0h1m9 0h3m2 0h3m1 0h1m1 0h1m-66 1h1m2 0h1m1 0h3m2 0h1m3 0h1m3 0h2m1 0h1m1 0h3m1 0h2m3 0h1m2 0h4m2 0h1m3 0h3m2 0h1m1 0h1m1 0h1m3 0h1m2 0h2m4 0h1m-68 1h1m3 0h1m3 0h8m3 0h1m4 0h2m1 0h1m3 0h1m3 0h3m2 0h1m1 0h1m9 0h1m4 0h4m2 0h1m1 0h3m-68 1h1m1 0h1m1 0h1m1 0h1m2 0h2m2 0h1m2 0h1m1 0h1m1 0h1m4 0h1m1 0h5m1 0h2m1 0h2m1 0h1m2 0h2m3 0h5m1 0h2m3 0h1m3 0h1m2 0h2m1 0h1m-68 1h1m2 0h1m2 0h8m2 0h1m1 0h1m1 0h4m1 0h1m2 0h2m2 0h1m5 0h4m4 0h2m2 0h2m1 0h2m3 0h3m1 0h1m1 0h3m-67 1h3m1 0h5m4 0h1m2 0h1m2 0h2m3 0h2m3 0h1m1 0h1m2 0h5m2 0h1m2 0h1m4 0h2m1 0h1m1 0h4m1 0h1m1 0h1m1 0h2m1 0h1m-68 1h1m2 0h1m1 0h1m1 0h1m2 0h2m1 0h1m1 0h2m2 0h2m3 0h1m1 0h1m2 0h3m3 0h3m1 0h2m7 0h1m2 0h2m1 0h1m1 0h2m1 0h1m3 0h1m1 0h2m-63 1h6m3 0h1m1 0h1m1 0h1m7 0h1m1 0h1m2 0h1m1 0h8m8 0h3m2 0h1m1 0h1m2 0h1m1 0h5m1 0h2m-68 1h1m3 0h1m3 0h2m2 0h1m1 0h1m3 0h3m1 0h3m2 0h1m3 0h2m3 0h2m1 0h5m3 0h3m3 0h3m3 0h2m3 0h3m-66 1h4m1 0h1m1 0h1m2 0h1m1 0h1m1 0h1m2 0h1m1 0h1m3 0h1m2 0h3m1 0h2m1 0h1m1 0h5m1 0h6m2 0h1m4 0h1m1 0h1m1 0h2m1 0h1m1 0h4m-67 1h1m2 0h1m3 0h1m1 0h1m1 0h1m2 0h1m3 0h2m7 0h2m1 0h2m3 0h3m1 0h3m1 0h1m2 0h1m2 0h1m1 0h6m2 0h1m3 0h1m1 0h1m-63 1h6m1 0h1m3 0h1m2 0h3m4 0h1m1 0h10m1 0h2m1 0h2m5 0h1m1 0h1m3 0h1m2 0h2m1 0h6m1 0h2m-69 1h1m1 0h4m1 0h1m1 0h4m1 0h1m3 0h1m3 0h4m5 0h2m1 0h1m5 0h3m4 0h3m3 0h4m2 0h2m1 0h1m2 0h2m1 0h1m-68 1h1m1 0h1m2 0h2m1 0h1m2 0h3m2 0h1m3 0h2m1 0h2m3 0h2m1 0h1m1 0h2m2 0h3m1 0h6m2 0h3m1 0h1m1 0h6m1 0h5m-68 1h1m1 0h1m1 0h2m3 0h2m1 0h2m4 0h2m1 0h2m2 0h1m1 0h1m2 0h1m5 0h2m1 0h5m1 0h2m2 0h4m2 0h3m7 0h3m-68 1h1m1 0h1m1 0h3m1 0h2m1 0h3m1 0h1m2 0h1m2 0h1m2 0h2m1 0h1m1 0h5m1 0h3m4 0h2m1 0h4m1 0h1m6 0h2m2 0h1m1 0h1m1 0h3m-67 1h1m1 0h1m1 0h1m2 0h1m2 0h4m1 0h2m1 0h1m1 0h1m1 0h2m1 0h1m5 0h2m3 0h1m1 0h5m1 0h1m1 0h3m2 0h3m1 0h1m2 0h2m1 0h1m-61 1h1m2 0h2m1 0h2m2 0h2m1 0h2m3 0h1m1 0h2m2 0h1m2 0h2m1 0h3m3 0h2m1 0h1m1 0h1m2 0h1m1 0h1m1 0h1m3 0h1m1 0h3m2 0h1m1 0h2m1 0h2m-68 1h1m1 0h4m1 0h1m4 0h1m1 0h1m1 0h1m1 0h1m1 0h2m2 0h1m1 0h2m5 0h1m1 0h2m1 0h1m1 0h4m2 0h1m5 0h3m8 0h1m2 0h2m-66 1h3m1 0h1m3 0h1m1 0h2m1 0h2m1 0h1m1 0h2m5 0h5m1 0h1m2 0h1m2 0h1m2 0h2m1 0h1m1 0h2m2 0h1m1 0h1m6 0h1m6 0h2m-64 1h1m2 0h1m1 0h2m1 0h2m2 0h1m1 0h1m1 0h4m1 0h1m4 0h3m1 0h1m3 0h1m1 0h3m1 0h1m3 0h1m4 0h1m1 0h1m2 0h2m1 0h1m4 0h1m-64 1h1m1 0h1m1 0h1m3 0h5m1 0h2m1 0h1m1 0h3m2 0h2m7 0h3m4 0h1m1 0h1m1 0h1m1 0h1m2 0h1m1 0h7m3 0h3m-68 1h1m9 0h1m4 0h4m2 0h1m1 0h2m2 0h1m5 0h1m1 0h3m2 0h1m1 0h1m3 0h1m1 0h2m2 0h7m3 0h1m2 0h4m-69 1h4m2 0h1m3 0h2m1 0h2m3 0h2m7 0h4m5 0h4m1 0h2m5 0h2m3 0h3m4 0h2m1 0h1m2 0h1m1 0h1m-67 1h1m1 0h1m4 0h3m5 0h2m3 0h6m1 0h3m1 0h2m5 0h6m1 0h3m1 0h1m1 0h2m4 0h3m3 0h1m1 0h1m-66 1h8m2 0h1m1 0h1m2 0h1m1 0h1m3 0h1m1 0h1m7 0h1m4 0h2m4 0h1m1 0h2m1 0h2m2 0h1m1 0h1m1 0h1m1 0h1m1 0h1m3 0h2m1 0h1m-69 1h3m1 0h1m4 0h1m5 0h4m2 0h4m4 0h5m1 0h2m2 0h3m2 0h1m1 0h1m3 0h1m1 0h3m1 0h1m2 0h2m1 0h1m2 0h3m-68 1h2m4 0h1m2 0h2m1 0h2m1 0h1m2 0h4m3 0h1m1 0h5m4 0h1m2 0h1m2 0h2m1 0h5m3 0h2m5 0h2m4 0h1m-67 1h6m1 0h2m3 0h2m4 0h1m2 0h4m1 0h1m4 0h2m1 0h2m1 0h1m1 0h5m3 0h3m2 0h1m1 0h1m1 0h1m2 0h1m6 0h1m1 0h1m-68 1h2m3 0h1m4 0h2m1 0h2m4 0h2m1 0h1m1 0h2m1 0h1m4 0h3m1 0h1m1 0h2m1 0h1m1 0h1m1 0h6m1 0h1m2 0h3m1 0h1m2 0h2m2 0h1m-68 1h1m3 0h1m3 0h1m3 0h3m2 0h1m3 0h1m2 0h1m3 0h4m1 0h2m1 0h1m3 0h4m1 0h2m1 0h1m2 0h3m1 0h2m6 0h4m-67 1h2m2 0h1m1 0h2m1 0h1m1 0h1m2 0h1m2 0h2m2 0h1m2 0h1m2 0h1m1 0h3m3 0h2m1 0h1m3 0h2m2 0h5m10 0h3m2 0h2m-68 1h2m1 0h1m1 0h1m6 0h1m2 0h1m1 0h2m2 0h1m1 0h4m5 0h1m2 0h3m1 0h1m1 0h2m1 0h2m1 0h1m1 0h1m1 0h1m2 0h1m1 0h1m3 0h3m2 0h1m1 0h2m-69 1h1m1 0h1m1 0h6m1 0h1m1 0h1m3 0h3m1 0h1m3 0h2m2 0h2m3 0h1m3 0h1m2 0h1m1 0h2m1 0h1m3 0h2m1 0h1m1 0h7m3 0h2m-67 1h1m8 0h2m2 0h1m1 0h1m3 0h3m1 0h3m2 0h3m1 0h1m2 0h3m1 0h5m1 0h2m2 0h2m1 0h1m3 0h1m3 0h1m2 0h1m1 0h3m-68 1h1m2 0h2m1 0h3m1 0h3m2 0h1m2 0h1m1 0h1m2 0h1m1 0h1m2 0h3m1 0h6m1 0h1m1 0h3m2 0h4m1 0h1m1 0h3m1 0h1m2 0h5m1 0h2m-60 1h4m1 0h1m1 0h1m2 0h2m1 0h1m1 0h4m2 0h1m2 0h1m3 0h1m3 0h3m4 0h1m1 0h1m4 0h2m3 0h2m3 0h2m1 0h2m-69 1h7m1 0h1m1 0h2m5 0h1m1 0h1m1 0h1m2 0h1m1 0h1m1 0h1m2 0h2m1 0h1m1 0h4m3 0h1m3 0h1m2 0h2m1 0h1m2 0h2m2 0h1m1 0h1m1 0h1m-65 1h1m5 0h1m2 0h2m5 0h1m2 0h3m1 0h2m1 0h2m2 0h1m1 0h1m3 0h3m1 0h2m1 0h3m3 0h1m3 0h4m1 0h3m3 0h1m1 0h1m-67 1h1m1 0h3m1 0h1m1 0h1m1 0h3m1 0h1m2 0h1m3 0h1m1 0h3m1 0h2m1 0h1m1 0h5m1 0h1m6 0h4m1 0h1m4 0h1m2 0h8m1 0h2m-69 1h1m1 0h3m1 0h1m1 0h2m1 0h3m4 0h4m1 0h3m7 0h1m1 0h1m1 0h1m1 0h1m1 0h5m1 0h1m3 0h4m1 0h1m2 0h1m1 0h1m1 0h1m2 0h1m-67 1h1m1 0h3m1 0h1m1 0h2m3 0h1m1 0h1m4 0h1m1 0h1m2 0h1m3 0h1m3 0h1m1 0h1m2 0h2m4 0h4m1 0h4m1 0h1m1 0h2m2 0h2m3 0h1m-66 1h1m5 0h1m1 0h4m7 0h2m4 0h1m2 0h1m3 0h3m2 0h1m2 0h2m2 0h1m4 0h1m1 0h1m3 0h2m3 0h2m1 0h4m-67 1h7m1 0h2m1 0h2m1 0h1m2 0h2m1 0h1m4 0h1m1 0h2m1 0h2m3 0h5m2 0h2m1 0h1m1 0h2m8 0h3m2 0h1m1 0h1m1 0h2"/></g></svg><p>Scan with the phone camera to save my contact</p></div>
+
+  <div class="about">
+    <h2>Recent experience</h2>
+    <ul>
+      <li>Technical Superintendent, CSM Energy – offshore wind jack-ups HEA Thor and HEA Wind Lift I</li>
+      <li>Vessel Superintendent, Telford Offshore – DP3 pipelay and construction barges (McDermott, Saudi Aramco)</li>
+      <li>Vessel Manager, Marampa Mines / Gerald Group – offshore fleet for mining export logistics</li>
+      <li>16 years at sea on DP2/DP3 drillships, MPSVs and offshore vessels</li>
+    </ul>
+  </div>
+
+  <div class="foot">Languages: English, Lithuanian, Russian<br>Based in Cyprus and Spain · ready to travel for interviews</div>
+</div>
+<script>
+(function(){
+  var VCF = "QkVHSU46VkNBUkQNClZFUlNJT046My4wDQpOOlR1Ym9sY2V2O0FuZHJlajs7Ow0KRk46QW5kcmVqIFR1Ym9sY2V2DQpUSVRMRTpWZXNzZWwgLyBUZWNobmljYWwgTWFuYWdlcg0KVEVMO1RZUEU9Q0VMTCxWT0lDRSxwcmVmOiszNTc5NzkxNTI2Mg0KaXRlbTEuVEVMO1RZUEU9Q0VMTDorOTcxNTg1NTk3MzY4DQppdGVtMS5YLUFCTGFiZWw6V2hhdHNBcHANCkVNQUlMO1RZUEU9SU5URVJORVQscHJlZjphbmRyZWp0dWJvbGNldkBnbWFpbC5jb20NCml0ZW0yLlVSTDpodHRwczovL3d3dy5saW5rZWRpbi5jb20vaW4vYW5kcmVqLXR1Ym9sY2V2LWI0ODAyMjg2DQppdGVtMi5YLUFCTGFiZWw6TGlua2VkSW4NCk5PVEU6Q3lwcnVzIG1vYmlsZSB1bnRpbCAxMSBEZWMgMjAyNi4gV2hhdHNBcHAgYW55IHRpbWUuDQpFTkQ6VkNBUkQNCg==";
+  // After 11 Dec 2026 the Cyprus number is no longer valid: hide it, make WhatsApp the call button.
+  try{
+    if(new Date() > new Date("2026-12-11T23:59:59+02:00")){
+      document.getElementById("rcall").classList.add("hide");
+      var q=document.getElementById("qcall"); q.href="https://wa.me/971585597368";
+      document.getElementById("avail").textContent="Available now";
+    }
+  }catch(e){}
+  document.getElementById("save").onclick=function(){
+    if(/github\.io$/.test(location.hostname)){location.href="Andrej_Tubolcev.vcf";return;}
+    try{
+      var bin=atob(VCF), bytes=new Uint8Array(bin.length);
+      for(var i=0;i<bin.length;i++)bytes[i]=bin.charCodeAt(i);
+      var blob=new Blob([bytes],{type:"text/vcard;charset=utf-8"});
+      var f=null; try{f=new File([blob],"Andrej_Tubolcev.vcf",{type:"text/vcard"})}catch(e){}
+      if(f && navigator.canShare && navigator.canShare({files:[f]}) && /iPhone|iPad|Android/i.test(navigator.userAgent)){
+        navigator.share({files:[f],title:"Andrej Tubolcev"}).catch(function(){});
+        return;
+      }
+      var a=document.createElement("a"); a.href=URL.createObjectURL(blob); a.download="Andrej_Tubolcev.vcf";
+      document.body.appendChild(a); a.click(); setTimeout(function(){a.remove()},500);
+    }catch(e){ location.href="data:text/vcard;base64,"+VCF; }
+  };
+  document.getElementById("qrb").onclick=function(){
+    var q=document.getElementById("qr"); q.classList.toggle("on");
+    this.textContent=q.classList.contains("on")?"Hide QR code":"Show QR code";
+  };
+  document.getElementById("share").onclick=function(){
+    var data={title:"Andrej Tubolcev – Vessel / Technical Manager",text:"Andrej Tubolcev, offshore marine manager. LinkedIn: https://www.linkedin.com/in/andrej-tubolcev-b4802286",url:location.href};
+    if(navigator.share){navigator.share(data).catch(function(){})}
+    else{try{navigator.clipboard.writeText(data.text);this.textContent="Copied"}catch(e){}}
+  };
+})();
+</script>
+</body>
+</html>
