@@ -1,0 +1,13 @@
+BEGIN:VCARD
+VERSION:3.0
+N:Tubolcev;Andrej;;;
+FN:Andrej Tubolcev
+TITLE:Vessel / Technical Manager
+TEL;TYPE=CELL,VOICE,pref:+35797915262
+item1.TEL;TYPE=CELL:+971585597368
+item1.X-ABLabel:WhatsApp
+EMAIL;TYPE=INTERNET,pref:andrejtubolcev@gmail.com
+item2.URL:https://www.linkedin.com/in/andrej-tubolcev-b4802286
+item2.X-ABLabel:LinkedIn
+NOTE:Cyprus mobile until 11 Dec 2026. WhatsApp any time.
+END:VCARD
